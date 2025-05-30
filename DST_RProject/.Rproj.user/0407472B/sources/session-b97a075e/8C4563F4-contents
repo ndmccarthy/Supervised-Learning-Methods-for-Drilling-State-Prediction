@@ -1,0 +1,24 @@
+---
+title: "DST_Preprocessing"
+author: "Nicole D. McCarthy"
+date: "April 14, 2025"
+output: pdf_document
+---
+
+# Preprocessing Steps
+
+First I need to determine when the different indicators are 0, low, or high. I will do this by normalizing the data that is relevant for these indicators. (For now I will ignore the columns that will act as validators until I am estimating the drilling state machine.)
+
+1. Flow?
+2. Rotation
+  a. RT_RPM.W
+  b. MR_RPM-AVG.MR
+3. Vibration (rescaling)
+  a. MR_VIBA.MR
+  b. MR_VIBL.MR
+  c. PD_Axial Vibration
+  d. PD_Lateral Vibration
+4. Rate of Penetration
+  a. RT_ROP
+5. Weight on Bit
+  a. RT_WOB

@@ -1,0 +1,26 @@
+{
+    "id": "8C4563F4",
+    "path": "~/Dynamic Survey Tool Project/DST_RProject/DST_CSVs/DST_Preprocessing.Rmd",
+    "project_path": "DST_CSVs/DST_Preprocessing.Rmd",
+    "type": "r_markdown",
+    "hash": "2889485049",
+    "contents": "",
+    "dirty": false,
+    "created": 1744678397942.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "11,8",
+        "scrollLine": "6"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1744679804,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1744679804140,
+    "read_only": false,
+    "read_only_alternatives": []
+}

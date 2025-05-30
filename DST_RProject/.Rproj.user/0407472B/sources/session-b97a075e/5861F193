@@ -1,0 +1,26 @@
+{
+    "id": "5861F193",
+    "path": "~/Dynamic Survey Tool Project/DST_RProject/DST_CSVs/DST_plotting.R",
+    "project_path": "DST_CSVs/DST_plotting.R",
+    "type": "r_source",
+    "hash": "3222299313",
+    "contents": "",
+    "dirty": false,
+    "created": 1744677097771.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "7,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1744679601,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1744679601967,
+    "read_only": false,
+    "read_only_alternatives": []
+}

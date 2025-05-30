@@ -1,0 +1,16 @@
+Estimating Drilling State Machine
+
+The Problem
+While drilling is occurring on oil rigs, the tools that are put downhole have more sensing capabilities than they used to. We can now sense vibration, flow, rotation, and much more at different parts of the tool in the hole. We can also use this information to estimate the drilling state machine. This refers to the state or mode that the tool is in, including pumps off, pumps on, sliding drilling, rotation, and rotational drilling. If we can estimate the drilling state machine in real time, paired with other data that the tool senses, then we can use that information to improve our drilling tools and techniques.
+
+The Data
+The data to be mined for this problem includes a few spreadsheets reflecting runs from a few different wells. Each run is about two days long and data is collected almost every second during the run. The volume can be estimated at around 6 MB. Each run consists of temporal sensor data with a high degree of accuracy.
+
+Applications
+The application for this project is focused on science discoveries and engineering innovations. Determining how the drilling state machine affects other sensors and measurements can increase our confidence levels of spatial awareness during directional drilling. It can also help determine why tools might fail in the field and how to prevent future tools from failing.
+
+Knowledge to Be Learned
+This analysis would result in finding anomalies in downhole sensor data, categorize the drilling state machine based on the sensor data found, and identify patterns in tool failures. There are many other applications as well, all of which may help with the descriptive, predictive, and prescriptive aspects of applying data mining to the problem.
+
+Techniques
+To acquire the desired knowledge and conduct the outlined applications, we would use classification primarily. However, we may also use frequent pattern analysis and anomaly detection.
