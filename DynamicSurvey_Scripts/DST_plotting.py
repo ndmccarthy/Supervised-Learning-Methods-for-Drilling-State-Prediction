@@ -1,8 +1,8 @@
 # used for making plotting functions on various spreadsheets for the project
 
 import pandas as pd
-import plotly
-
+import matplotlib.pyplot as plt
+'''
 # read in data (right now only first run recorded)
 data_path = '..\cleaned_run_data.xlsx'
 run_data = pd.read_excel(data_path)
@@ -26,3 +26,13 @@ print(time_depth_df.head())
 
 # plot
 #plotly.plot(time_depth_df, 'line')
+'''
+
+df = pd.read_excel("../../Flybar 1WB_filtered_data.xlsx")
+plt.figure()
+plt.scatter(df['RT_Time'], df['PD_Axial Vibration'], label='Axial')
+plt.scatter(df['RT_Time'], df['PD_Lateral Vibration'], label='Lateral')
+plt.xlabel('RT_Time')
+plt.ylabel('Vibration')
+plt.legend()
+plt.show()
