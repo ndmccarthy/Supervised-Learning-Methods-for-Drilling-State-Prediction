@@ -3,10 +3,6 @@
 from DST_preprocessing import *
 from DST_storage import *
 
-# run_path = new_file_paths["run_data"]
-# df = pd.read_excel(run_path, sheet_name='Flybar 1 WB Run 7')
-# new_df = transformRunData(df, indicators)
-
 
 print("Grabbing Requested Run data")
 requested_runs_df = pd.read_excel("../../Requested_Run_Log.xlsx")
@@ -16,11 +12,9 @@ for rig in rig_files:
     print(f"{rig_name}")
     print(f"\tCleaning")
     rig_df = cleanRigData(rig)
-    print(f"\tCalculating States")
-    rig_df['State'] = rig_df.apply(defineDSM, axis=1)
     print(f"\tSaving")
     with pd.ExcelWriter(f"../../Cleaned_{rig_name}.xlsx", engine='xlsxwriter') as writer:
-        rig_df.to_excel(writer, sheet_name=rig_name)
+        rig_df.to_excel(writer, sheet_name=rig_name, index=False)
     print(f'\tLooking for runs...')
     for ii in range(len(requested_runs_df)):
         run = requested_runs_df.iloc[ii]
@@ -32,7 +26,7 @@ for rig in rig_files:
             run_df = createRunDF(rig_df, run)
             print(f"\t\tSaving")
             with pd.ExcelWriter(f"../../Cleaned_{entire_name}.xlsx", engine='xlsxwriter') as writer:
-                run_df.to_excel(writer, sheet_name=entire_name)
+                run_df.to_excel(writer, sheet_name=entire_name, index=False)
             print(f"\t\tRun Completed")
     print(f"Rig Completed")
-print('All preprocessing completed!')
+print('All preprocessing completed!') 
