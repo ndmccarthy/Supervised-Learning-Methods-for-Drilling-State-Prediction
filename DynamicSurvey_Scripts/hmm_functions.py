@@ -4,11 +4,11 @@ import pandas as pd
 def prepare_data():
     # read in data
     print('Reading Training Set 1')
-    dfb = pd.read_excel('../../Cleaned_Flybar1WB.xlsx')
+    dfb = pd.read_excel('../../Cleaned_Data/Cleaned_Flybar1WB.xlsx')
     print("Reading Training Set 2")
-    dfc = pd.read_excel('../../Cleaned_Flybar1WC.xlsx')
+    dfc = pd.read_excel('../../Cleaned_Data/Cleaned_Flybar1WC.xlsx')
     print("Reading Test Set")
-    df_test = pd.read_excel('../../Cleaned_Flybar2WC.xlsx')
+    df_test = pd.read_excel('../../Cleaned_Data/Cleaned_Flybar2WC.xlsx')
     # joining training data sets under assumption that they have to start and end on state 0
     dfc.drop(columns=['MR_RPM-MAG-AVG.MR', 'MR_GRAV.M'], inplace=True)
     df_train = pd.concat([dfb, dfc], ignore_index=True)
