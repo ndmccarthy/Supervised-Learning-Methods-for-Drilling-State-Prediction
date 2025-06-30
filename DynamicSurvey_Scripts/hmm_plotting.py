@@ -1,6 +1,7 @@
 # this script helps infer which HMM implementations were the most useful by visualizing the results
 
 import pandas as pd
+import numpy as np
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -68,7 +69,7 @@ plt.xlabel('Number of States')
 plt.ylabel('Log Likelihood')
 plt.title(f'Log Likelihoods Based on Number of States \nfor Models with Only Pulser Vibration Data')
 plt.show()
-'''
+
 for state_num in range(2, 16):
     new_df = hmm_df[hmm_df['Number of States'] == state_num]
     new_df = new_df[new_df['Log Likelihood'] >= -1250000]
@@ -81,3 +82,18 @@ for state_num in range(2, 16):
     plt.title(f'Log Likelihoods for Models with {state_num} States')
     plt.legend(title = 'Feature Set')
     plt.show()
+'''
+
+# plotting highest log likelihood models including WOB models
+
+sort_df = hmm_df.sort_values(by='Log Likelihood', ascending=False)
+top_df = sort_df.head(15)
+
+plt.figure()
+sns.scatterplot(data=top_df, x='Number of States', y='BIC', hue='Feature Set', palette='tab10')
+plt.xlabel('Number of States in Model')
+plt.ylabel('BIC')
+plt.title('Best Fitted Hidden Markov Models')
+plt.legend(title = 'Feature Set')
+plt.xticks(np.arange(2, 16, 1), [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+plt.show()
